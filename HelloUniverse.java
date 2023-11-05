@@ -42,7 +42,7 @@ public class HelloUniverse {
             }
         }
 
-     */
+
         Planete mercure = new Planete();
         mercure.nom = "Mercure";
         mercure.matiere = "Tellurique";
@@ -103,11 +103,11 @@ public class HelloUniverse {
         System.out.println(venus.nom + " a effectué " + venus.revolution(1250) + " tours complets autour d'elle-même.");
 
 //Exercice 18
-        /*MODIFICATION DE LA METHODE LORS DE L'EXERCICE 20
+        //MODIFICATION DE LA METHODE LORS DE L'EXERCICE 20
         mars.accueillirVaisseau(8);
         mars.accueillirVaisseau("FREGATE");
         System.out.println("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de " + mars.totalVisiteurs);
-        */
+
 
 //Exercice 19
         System.out.println("L'atmosphère de Uranus est composée de : ");
@@ -118,8 +118,9 @@ public class HelloUniverse {
         System.out.println("A " + uranus.atmosphere.helium + "% d'hélium");
         System.out.println("A " + uranus.atmosphere.methane + "% de méthane");
         System.out.println("A " + uranus.atmosphere.sodium + "% de sodium");
-
+*/
 //Exercice 20
+
         Vaisseau fregate1= new Vaisseau();
         fregate1.type="FREGATE";
         fregate1.nbPassagers=9;
@@ -127,12 +128,14 @@ public class HelloUniverse {
         Vaisseau croiseur1 = new Vaisseau();
         croiseur1.type="CROISEUR";
         croiseur1.nbPassagers=42;
-
+/*
         mars.accueillirVaisseau(fregate1);
         mars.accueillirVaisseau(croiseur1);
 
         System.out.println("Le nombre d'humains ayant déjà sejourné sur " + mars.nom + " est actuellement de " + mars.totalVisiteurs);
+*/
 //Exercice 21 : Proprietes statiques
+
 
         System.out.println("La forme d'une planète est : " + Planete.forme);
         System.out.println("La forme de " + mars.nom +" est : " + Planete.forme);
@@ -145,6 +148,7 @@ public class HelloUniverse {
 //Exercice 23 : Les constructeurs
         System.out.println("Le nombre de planètes decouvertes à ce jour est de "+Planete.nbPlaneteDecouvertes);
 
+/*
 //Exercice 24 : Ajouter un constructeur
         Planete mercure2 = new Planete("Mercure2");
         mercure2.matiere = "Tellurique";
@@ -181,7 +185,7 @@ public class HelloUniverse {
         neptune2.matiere = "Gazeuze";
         neptune2.diametre = 49528;
 
-
+*/
 //EXercice 25 : Heritage
     VaisseauDeGuerre chasseur1 = new VaisseauDeGuerre();
     chasseur1.blindage=156;
@@ -201,6 +205,52 @@ public class HelloUniverse {
     vaisseauMonde1.desactiverBouclier();
     System.out.println("Duree de protection residuelle du bouclier est de " + vaisseauMonde1.resistanceDuBouclier);
     System.out.println("Le blindage du Vaisseau Monde apres l'attaque est de " + vaisseauMonde1.blindage);
+
+
+//Exercice 26 : Les interfaces
+        Planete mercure3 = new PlaneteTellurique("Mercure3");
+        mercure3.diametre = 4879;
+
+        Planete venus3 = new PlaneteTellurique("Venus3");
+        venus3.diametre = 12013;
+
+        Planete terre3 = new PlaneteTellurique("Terre3");
+        terre3.diametre = 12756;
+
+        PlaneteTellurique mars3 = new PlaneteTellurique("Mars3");
+        mars3.diametre = 6792;
+
+        Planete jupiter3 = new PlaneteGazeuse("Jupiter3");
+        jupiter3.diametre = 142984;
+
+        Planete saturne3 = new PlaneteGazeuse("Saturne3");
+        saturne3.diametre = 120536;
+
+        Planete uranus3 = new PlaneteGazeuse("Uranus3");
+        uranus3.diametre = 51118;
+        uranus3.atmosphere.hydrogene=83;
+        uranus3.atmosphere.helium=15;
+        uranus3.atmosphere.methane=2.5F;
+
+        Planete neptune3 = new PlaneteGazeuse("Neptune3");
+        neptune3.diametre = 49528;
+
+        VaisseauCivil vaisseau3 = new VaisseauCivil();
+        mars3.accueillirVaisseau(vaisseau3);
+//Exercice 27 : instanceof
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //FIN DU MAIN
     }
